@@ -11,7 +11,7 @@ def generate_summary(text: str, custom_prompt: Optional[str] = None) -> str:
     """
     try:
         client = openai.OpenAI(
-            api_key="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", 
+            api_key=os.getenv("PERPLEXITY_API_KEY"), 
             base_url="https://api.perplexity.ai"
         )
         
